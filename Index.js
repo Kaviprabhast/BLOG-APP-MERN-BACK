@@ -10,7 +10,7 @@ app.use(cors());
 
 app.use(express.json());
 
-mongoose.connect('mongodb+srv://Kaviprabha:Prabha2006@prabha.bg2ze.mongodb.net/testretryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://Kaviprabha:Prabha2006@prabha.bg2ze.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => console.log('Connected to MongoDB'))
