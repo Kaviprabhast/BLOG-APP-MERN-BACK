@@ -7,13 +7,13 @@ const nodemailer = require('nodemailer');
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://blog-app-seven-zeta.vercel.app/',
     credentials: true
 }));
 
 app.use(express.json());
 
-mongoose.connect('mongodb+srv://Kaviprabha:Prabha2006@prabha.bg2ze.mongodb.net/', {
+mongoose.connect('mongodb+srv://Kaviprabha:Prabha2006@prabha.bg2ze.mongodb.net/testretryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => console.log('Connected to MongoDB'))
@@ -252,5 +252,5 @@ app.delete('/blogs/:id', async (req, res) => {
 
 
 app.listen(4000, () => {
-    console.log('Server is running on port http://localhost:4000');
+    console.log('Server is running on port https://blog-app-mern-back-8b2y.onrender.com');
 });
