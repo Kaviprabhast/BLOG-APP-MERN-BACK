@@ -6,10 +6,7 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 
-app.use(cors({
-    origin: 'https://blog-app-seven-zeta.vercel.app/',
-    credentials: true
-}));
+app.use(cors());
 
 app.use(express.json());
 
@@ -252,5 +249,5 @@ app.delete('/blogs/:id', async (req, res) => {
 
 
 app.listen(4000, () => {
-    console.log('Server is running on port https://blog-app-mern-back-8b2y.onrender.com');
+    console.log('Server is running on port https://localhost:4000');
 });
